@@ -1,6 +1,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Driver, AIServiceResponse, TripRequest, Truck } from "../types";
 
+// Fix for TS2580: Cannot find name 'process'
+declare const process: any;
+
 // NOTE: In production, do not hardcode keys. 
 // The system assumes process.env.API_KEY is available.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });

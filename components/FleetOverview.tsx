@@ -1,6 +1,6 @@
 import React from 'react';
 import { Truck, Driver, TruckStatus, DriverStatus, DriverLicenseStatus } from '../types';
-import { Truck as TruckIcon, User, AlertCircle, CheckCircle, Clock, Ban } from 'lucide-react';
+import { Truck as TruckIcon, User, AlertCircle } from 'lucide-react';
 
 interface FleetOverviewProps {
   trucks: Truck[];

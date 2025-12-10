@@ -12,7 +12,7 @@ interface AssignmentFormProps {
 }
 
 const AssignmentForm: React.FC<AssignmentFormProps> = ({ 
-  match, truck, driver, request, onBack, onConfirm 
+  truck, driver, request, onBack, onConfirm 
 }) => {
   const [internalId, setInternalId] = useState('');
   const [customerTransportId, setCustomerTransportId] = useState('');

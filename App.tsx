@@ -7,7 +7,7 @@ import AssignmentHistory from './components/AssignmentHistory';
 import { MOCK_DRIVERS, MOCK_TRUCKS } from './constants';
 import { MatchRecommendation, TripRequest, TripAnalysis, ConfirmedAssignment } from './types';
 import { findMatches } from './services/geminiService';
-import { Activity, LayoutDashboard, CheckCircle, FileClock, Menu } from 'lucide-react';
+import { Activity, CheckCircle, FileClock, Menu } from 'lucide-react';
 
 type ViewState = 'SEARCH' | 'ASSIGNMENT' | 'SUCCESS' | 'HISTORY';
 

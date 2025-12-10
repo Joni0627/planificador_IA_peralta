@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TripRequest } from '../types';
-import { MapPin, Box, Scale, ArrowRight, Search, Loader2 } from 'lucide-react';
+import { MapPin, Box, Scale, Search, Loader2 } from 'lucide-react';
 
 interface TripFormProps {
   onSubmit: (data: TripRequest) => void;

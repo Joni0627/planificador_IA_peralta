@@ -1,6 +1,6 @@
 import React from 'react';
 import { ConfirmedAssignment } from '../types';
-import { ArrowLeft, Search, Truck, User, Calendar, FileText } from 'lucide-react';
+import { ArrowLeft, Truck, User, Calendar, FileText } from 'lucide-react';
 
 interface AssignmentHistoryProps {
   history: ConfirmedAssignment[];
