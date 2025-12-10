@@ -37,6 +37,14 @@
         }
       }
     </script>
+    <!-- Polyfill for process to prevent 'process is not defined' errors in browser -->
+    <script>
+      window.process = {
+        env: {
+          NODE_ENV: 'production'
+        }
+      };
+    </script>
 <script type="importmap">
 {
   "imports": {

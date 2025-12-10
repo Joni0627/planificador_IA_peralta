@@ -4,16 +4,16 @@ import { Driver, AIServiceResponse, TripRequest, Truck } from "../types";
 // Fix for TS2580: Cannot find name 'process'
 declare const process: any;
 
-// NOTE: In production, do not hardcode keys. 
-// The system assumes process.env.API_KEY is available.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const findMatches = async (
   request: TripRequest,
   trucks: Truck[],
   drivers: Driver[]
 ): Promise<AIServiceResponse> => {
   
+  // NOTE: Initialization moved inside the function (Lazy Init).
+  // This prevents the entire app from crashing on white screen at startup
+  // if the API Key is missing or invalid. It will only fail when 'Analyze' is clicked.
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   const model = "gemini-2.5-flash";
 
   const prompt = `
